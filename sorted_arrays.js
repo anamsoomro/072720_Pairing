@@ -9,6 +9,7 @@ function sortArrays(arr1, arr2){
   let arr2_i = 0
   let sorted = []
   
+  // compare the two pointers and only increment if it gets shoveled
   while(arr1_i !== arr1.length && arr2_i !== arr2.length){
     if(arr1[arr1_i] < arr2[arr2_i]){
       sorted.push(arr1[arr1_i])
@@ -25,6 +26,7 @@ sorted.push(...rest_of_arr1)
 // slice the rest of arr2 into sorted
 let rest_of_arr2 = arr2.slice(arr2_i, arr2.length)
 sorted.push(...rest_of_arr2)
+console.log(sorted)
 return sorted
 }
 
